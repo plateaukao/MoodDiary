@@ -39,11 +39,10 @@
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"Y/MM/dd  HH:mm"];
     NSString *dateString = [format stringFromDate:self.diary.date];
-    self.dateString.text = dateString;
-    
+    self.navigationItem.title = dateString;
+
     self.contentString.text = self.diary.content;
     self.moodString.text = [DDMood getMood:self.diary.mood];
-    
 }
 
 - (void)didReceiveMemoryWarning
