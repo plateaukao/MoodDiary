@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A207413C16E8F82000BEFE90 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A207413B16E8F82000BEFE90 /* CoreDataTableViewController.m */; };
+		A207413F16EB068E00BEFE90 /* DDDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */; };
 		A28AD50616DC790800D7ADBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50516DC790800D7ADBD /* UIKit.framework */; };
 		A28AD50816DC790800D7ADBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50716DC790800D7ADBD /* Foundation.framework */; };
 		A28AD50A16DC790800D7ADBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50916DC790800D7ADBD /* CoreGraphics.framework */; };
@@ -19,9 +21,21 @@
 		A28AD51F16DC790800D7ADBD /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28AD51D16DC790800D7ADBD /* MainStoryboard_iPhone.storyboard */; };
 		A28AD52216DC790800D7ADBD /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28AD52016DC790800D7ADBD /* MainStoryboard_iPad.storyboard */; };
 		A28AD52516DC790800D7ADBD /* DDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD52416DC790800D7ADBD /* DDViewController.m */; };
+		A28AD52C16DC7AC000D7ADBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD52B16DC7AC000D7ADBD /* CoreData.framework */; };
+		A28AD53016DC81ED00D7ADBD /* DDMoodPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD52F16DC81ED00D7ADBD /* DDMoodPickerViewController.m */; };
+		A28AD53316DC862A00D7ADBD /* DDMood.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53216DC862A00D7ADBD /* DDMood.m */; };
+		A28AD53616DC8DE200D7ADBD /* DDCreateDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53516DC8DE200D7ADBD /* DDCreateDiaryViewController.m */; };
+		A28AD53916DC95A000D7ADBD /* diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53716DC95A000D7ADBD /* diary.xcdatamodeld */; };
+		A28AD53C16DC985600D7ADBD /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53B16DC985600D7ADBD /* Diary.m */; };
+		A28AD54016DC989900D7ADBD /* Diary+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53F16DC989900D7ADBD /* Diary+Extended.m */; };
+		A28AD54916DCF04C00D7ADBD /* DDDiaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A207413A16E8F81F00BEFE90 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		A207413B16E8F82000BEFE90 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		A207413D16EB068E00BEFE90 /* DDDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDiaryViewController.h; sourceTree = "<group>"; };
+		A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDiaryViewController.m; sourceTree = "<group>"; };
 		A28AD50216DC790800D7ADBD /* DDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28AD50516DC790800D7ADBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A28AD50716DC790800D7ADBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +53,20 @@
 		A28AD52116DC790800D7ADBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A28AD52316DC790800D7ADBD /* DDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDViewController.h; sourceTree = "<group>"; };
 		A28AD52416DC790800D7ADBD /* DDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDViewController.m; sourceTree = "<group>"; };
+		A28AD52B16DC7AC000D7ADBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A28AD52E16DC81ED00D7ADBD /* DDMoodPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMoodPickerViewController.h; sourceTree = "<group>"; };
+		A28AD52F16DC81ED00D7ADBD /* DDMoodPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMoodPickerViewController.m; sourceTree = "<group>"; };
+		A28AD53116DC862A00D7ADBD /* DDMood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMood.h; sourceTree = "<group>"; };
+		A28AD53216DC862A00D7ADBD /* DDMood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMood.m; sourceTree = "<group>"; };
+		A28AD53416DC8DE200D7ADBD /* DDCreateDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCreateDiaryViewController.h; sourceTree = "<group>"; };
+		A28AD53516DC8DE200D7ADBD /* DDCreateDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCreateDiaryViewController.m; sourceTree = "<group>"; };
+		A28AD53816DC95A000D7ADBD /* diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = diary.xcdatamodel; sourceTree = "<group>"; };
+		A28AD53A16DC985600D7ADBD /* Diary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diary.h; sourceTree = "<group>"; };
+		A28AD53B16DC985600D7ADBD /* Diary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diary.m; sourceTree = "<group>"; };
+		A28AD53E16DC989900D7ADBD /* Diary+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Diary+Extended.h"; sourceTree = "<group>"; };
+		A28AD53F16DC989900D7ADBD /* Diary+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Diary+Extended.m"; sourceTree = "<group>"; };
+		A28AD54716DCF04C00D7ADBD /* DDDiaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDiaryTableViewController.h; sourceTree = "<group>"; };
+		A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDiaryTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28AD52C16DC7AC000D7ADBD /* CoreData.framework in Frameworks */,
 				A28AD50616DC790800D7ADBD /* UIKit.framework in Frameworks */,
 				A28AD50816DC790800D7ADBD /* Foundation.framework in Frameworks */,
 				A28AD50A16DC790800D7ADBD /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +87,7 @@
 		A28AD4F916DC790800D7ADBD = {
 			isa = PBXGroup;
 			children = (
+				A28AD52B16DC7AC000D7ADBD /* CoreData.framework */,
 				A28AD50B16DC790800D7ADBD /* DDiary */,
 				A28AD50416DC790800D7ADBD /* Frameworks */,
 				A28AD50316DC790800D7ADBD /* Products */,
@@ -85,10 +115,22 @@
 		A28AD50B16DC790800D7ADBD /* DDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A28AD52E16DC81ED00D7ADBD /* DDMoodPickerViewController.h */,
+				A28AD52F16DC81ED00D7ADBD /* DDMoodPickerViewController.m */,
+				A207413A16E8F81F00BEFE90 /* CoreDataTableViewController.h */,
+				A207413B16E8F82000BEFE90 /* CoreDataTableViewController.m */,
+				A28AD54716DCF04C00D7ADBD /* DDDiaryTableViewController.h */,
+				A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */,
+				A28AD53416DC8DE200D7ADBD /* DDCreateDiaryViewController.h */,
+				A28AD53516DC8DE200D7ADBD /* DDCreateDiaryViewController.m */,
+				A207413D16EB068E00BEFE90 /* DDDiaryViewController.h */,
+				A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */,
+				A28AD53116DC862A00D7ADBD /* DDMood.h */,
+				A28AD53216DC862A00D7ADBD /* DDMood.m */,
 				A28AD51416DC790800D7ADBD /* DDAppDelegate.h */,
 				A28AD51516DC790800D7ADBD /* DDAppDelegate.m */,
-				A28AD51D16DC790800D7ADBD /* MainStoryboard_iPhone.storyboard */,
-				A28AD52016DC790800D7ADBD /* MainStoryboard_iPad.storyboard */,
+				A28AD53D16DC986500D7ADBD /* database related */,
+				A28AD52D16DC7B2600D7ADBD /* xcode related files */,
 				A28AD52316DC790800D7ADBD /* DDViewController.h */,
 				A28AD52416DC790800D7ADBD /* DDViewController.m */,
 				A28AD50C16DC790800D7ADBD /* Supporting Files */,
@@ -108,6 +150,27 @@
 				A28AD51B16DC790800D7ADBD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A28AD52D16DC7B2600D7ADBD /* xcode related files */ = {
+			isa = PBXGroup;
+			children = (
+				A28AD51D16DC790800D7ADBD /* MainStoryboard_iPhone.storyboard */,
+				A28AD52016DC790800D7ADBD /* MainStoryboard_iPad.storyboard */,
+			);
+			name = "xcode related files";
+			sourceTree = "<group>";
+		};
+		A28AD53D16DC986500D7ADBD /* database related */ = {
+			isa = PBXGroup;
+			children = (
+				A28AD53716DC95A000D7ADBD /* diary.xcdatamodeld */,
+				A28AD53A16DC985600D7ADBD /* Diary.h */,
+				A28AD53E16DC989900D7ADBD /* Diary+Extended.h */,
+				A28AD53F16DC989900D7ADBD /* Diary+Extended.m */,
+				A28AD53B16DC985600D7ADBD /* Diary.m */,
+			);
+			name = "database related";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +244,15 @@
 				A28AD51216DC790800D7ADBD /* main.m in Sources */,
 				A28AD51616DC790800D7ADBD /* DDAppDelegate.m in Sources */,
 				A28AD52516DC790800D7ADBD /* DDViewController.m in Sources */,
+				A28AD53016DC81ED00D7ADBD /* DDMoodPickerViewController.m in Sources */,
+				A28AD53316DC862A00D7ADBD /* DDMood.m in Sources */,
+				A28AD53616DC8DE200D7ADBD /* DDCreateDiaryViewController.m in Sources */,
+				A28AD53916DC95A000D7ADBD /* diary.xcdatamodeld in Sources */,
+				A28AD53C16DC985600D7ADBD /* Diary.m in Sources */,
+				A28AD54016DC989900D7ADBD /* Diary+Extended.m in Sources */,
+				A28AD54916DCF04C00D7ADBD /* DDDiaryTableViewController.m in Sources */,
+				A207413C16E8F82000BEFE90 /* CoreDataTableViewController.m in Sources */,
+				A207413F16EB068E00BEFE90 /* DDDiaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +385,22 @@
 				A28AD52A16DC790800D7ADBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A28AD53716DC95A000D7ADBD /* diary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A28AD53816DC95A000D7ADBD /* diary.xcdatamodel */,
+			);
+			currentVersion = A28AD53816DC95A000D7ADBD /* diary.xcdatamodel */;
+			path = diary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A28AD4FA16DC790800D7ADBD /* Project object */;
 }
