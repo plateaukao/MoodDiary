@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A207413C16E8F82000BEFE90 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A207413B16E8F82000BEFE90 /* CoreDataTableViewController.m */; };
 		A207413F16EB068E00BEFE90 /* DDDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */; };
+		A207414116EC288E00BEFE90 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = A207414016EC288E00BEFE90 /* TODO */; };
 		A28AD50616DC790800D7ADBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50516DC790800D7ADBD /* UIKit.framework */; };
 		A28AD50816DC790800D7ADBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50716DC790800D7ADBD /* Foundation.framework */; };
 		A28AD50A16DC790800D7ADBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AD50916DC790800D7ADBD /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 		A207413B16E8F82000BEFE90 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		A207413D16EB068E00BEFE90 /* DDDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDiaryViewController.h; sourceTree = "<group>"; };
 		A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDiaryViewController.m; sourceTree = "<group>"; };
+		A207414016EC288E00BEFE90 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		A28AD50216DC790800D7ADBD /* DDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28AD50516DC790800D7ADBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A28AD50716DC790800D7ADBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +150,7 @@
 				A28AD51716DC790800D7ADBD /* Default.png */,
 				A28AD51916DC790800D7ADBD /* Default@2x.png */,
 				A28AD51B16DC790800D7ADBD /* Default-568h@2x.png */,
+				A207414016EC288E00BEFE90 /* TODO */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				A28AD51C16DC790800D7ADBD /* Default-568h@2x.png in Resources */,
 				A28AD51F16DC790800D7ADBD /* MainStoryboard_iPhone.storyboard in Resources */,
 				A28AD52216DC790800D7ADBD /* MainStoryboard_iPad.storyboard in Resources */,
+				A207414116EC288E00BEFE90 /* TODO in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
