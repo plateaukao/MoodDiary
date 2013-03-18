@@ -20,6 +20,17 @@
 
 @synthesize diary = _diary;
 
+- (void) updateUI
+{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"Y/MM/dd  HH:mm"];
+    NSString *dateString = [format stringFromDate:self.diary.date];
+    self.navigationItem.title = dateString;
+    
+    self.contentString.text = self.diary.content;
+    self.moodString.text = [DDMood getMood:self.diary.mood];
+}
+
 -(void) setDiary:(Diary *)diary
 {
     if(_diary != diary)
@@ -27,22 +38,26 @@
         _diary = diary;
     }
 
-     
+    [self updateUI];
+    
 }
- 
+
+- (IBAction)swipeRightHandler:(id)sender
+{
+    [self.delegate setPreviousDiary];
+}
+
+- (IBAction)swipeLeftHandler:(id)sender
+{
+    [self.delegate setNextDiary];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"Y/MM/dd  HH:mm"];
-    NSString *dateString = [format stringFromDate:self.diary.date];
-    self.navigationItem.title = dateString;
+    [self updateUI];
 
-    self.contentString.text = self.diary.content;
-    self.moodString.text = [DDMood getMood:self.diary.mood];
 }
 
 - (void)didReceiveMemoryWarning

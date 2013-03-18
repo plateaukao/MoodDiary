@@ -188,6 +188,11 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mtI-X8-89o" appends="YES" id="k1U-qA-QMF"/>
+                            <outletCollection property="gestureRecognizers" destination="lzR-V1-dhm" appends="YES" id="CNJ-Iy-FSd"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="KMl-w6-yMY"/>
                     <connections>
@@ -196,6 +201,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQB-qX-iwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="mtI-X8-89o">
+                    <connections>
+                        <action selector="swipeRightHandler:" destination="WUg-Nj-OU2" id="ECy-h9-VxX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="lzR-V1-dhm">
+                    <connections>
+                        <action selector="swipeLeftHandler:" destination="WUg-Nj-OU2" id="5fo-Pi-V97"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="914" y="679"/>
         </scene>
@@ -218,36 +233,6 @@
             <point key="canvasLocation" x="12" y="10"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="DDCreateDiaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDCreateDiaryViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="moodButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="DDDiaryTableViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDDiaryTableViewController.h"/>
-        </class>
-        <class className="DDDiaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDDiaryViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contentString" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="dateString" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="moodString" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DDMoodPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDMoodPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

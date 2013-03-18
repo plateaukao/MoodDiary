@@ -8,19 +8,52 @@
 
 #import "DDDiaryTableViewController.h"
 #import "Diary+Extended.h"
-#import "DDDiaryViewController.h"
 
 @interface DDDiaryTableViewController ()
 
 @property (nonatomic, strong) UIManagedDocument *dbFile;
+@property (nonatomic, strong) DDDiaryViewController* diaryVC;
 
 @end
 
 @implementation DDDiaryTableViewController
 
 @synthesize dbFile = _dbFile;
+@synthesize diaryVC = _diaryVC;
 
+#pragma mark DiaryViewerDelegate
 
+-(void) setNextDiary
+{
+    NSInteger currentIndex = self.tableView.indexPathForSelectedRow.row;
+    int diaryCount = [[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects];
+    if(currentIndex < diaryCount-1)
+    {
+        //change selected index
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:currentIndex+1 inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionMiddle];
+        
+        Diary *d = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+        [self.diaryVC setDiary:d];
+    }
+    
+}
+-(void) setPreviousDiary
+{
+    NSInteger currentIndex = self.tableView.indexPathForSelectedRow.row;
+    if(0 < currentIndex)
+    {
+        //change selected index
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:currentIndex-1 inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionMiddle];
+        
+        Diary *d = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+        [self.diaryVC setDiary:d];
+    }
+    
+}
+
+#pragma mark initialization
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,7 +68,7 @@
 - (void) setupFetchedResultsController
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Diary"];
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.dbFile.managedObjectContext
@@ -135,44 +168,17 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        
+        Diary *d = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [self.fetchedResultsController.managedObjectContext deleteObject:d];
+        
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -196,6 +202,8 @@
     else if ([segue.identifier isEqualToString:@"viewDiary"])
     {
         DDDiaryViewController *vc = (DDDiaryViewController*) segue.destinationViewController;
+        vc.delegate = self;
+        self.diaryVC = vc;
         
         Diary* d = (Diary*) sender;
         [vc setDiary:d];

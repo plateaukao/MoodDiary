@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
 #import "DDCreateDiaryViewController.h"
+#import "DDDiaryViewController.h"
 
-@interface DDDiaryTableViewController : CoreDataTableViewController <CreateDiaryDelegate>
+@interface DDDiaryTableViewController : CoreDataTableViewController <CreateDiaryDelegate, DiaryViewerDelegate>
 
 @end
