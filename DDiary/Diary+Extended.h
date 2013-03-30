@@ -14,5 +14,7 @@
 + (Diary *) diaryWithMood:(DDMood*) mood
                   andDate:(NSDate*) date
                andContent:(NSString*) content
-   inManagedObjectContext:context;  
+   inManagedObjectContext:context;
+
+
 @end

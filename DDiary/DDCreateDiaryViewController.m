@@ -69,7 +69,10 @@
 
 - (void) MoodPicker:(DDMoodPickerViewController *)sender seletedMood:(DDMood *)mood
 {
-    self.mood = mood;
+    if(!mood)
+        self.mood = [[DDMood alloc] initWithValue:@0];
+    else
+        self.mood = mood;
     [self.moodButton setTitle:[NSString stringWithFormat:@"Mood %@", mood.description] forState:UIControlStateNormal];
     //[self.moodButton setNeedsLayout];
     

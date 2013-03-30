@@ -52,6 +52,7 @@
     
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
+    [self.pickerView selectRow:2 inComponent:0 animated:YES];
     
 }
 

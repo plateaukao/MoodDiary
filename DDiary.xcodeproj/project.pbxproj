@@ -30,6 +30,9 @@
 		A28AD53C16DC985600D7ADBD /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53B16DC985600D7ADBD /* Diary.m */; };
 		A28AD54016DC989900D7ADBD /* Diary+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD53F16DC989900D7ADBD /* Diary+Extended.m */; };
 		A28AD54916DCF04C00D7ADBD /* DDDiaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */; };
+		A2CB05E616FB92F6008E46F7 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB05E316FB92F6008E46F7 /* PCLineChartView.m */; };
+		A2CB05E716FB92F6008E46F7 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB05E516FB92F6008E46F7 /* PCPieChart.m */; };
+		A2CB05EA16FB990C008E46F7 /* DDChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB05E916FB990C008E46F7 /* DDChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,12 @@
 		A28AD53F16DC989900D7ADBD /* Diary+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Diary+Extended.m"; sourceTree = "<group>"; };
 		A28AD54716DCF04C00D7ADBD /* DDDiaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDiaryTableViewController.h; sourceTree = "<group>"; };
 		A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDiaryTableViewController.m; sourceTree = "<group>"; };
+		A2CB05E216FB92F6008E46F7 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
+		A2CB05E316FB92F6008E46F7 /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
+		A2CB05E416FB92F6008E46F7 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
+		A2CB05E516FB92F6008E46F7 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
+		A2CB05E816FB990C008E46F7 /* DDChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDChartViewController.h; sourceTree = "<group>"; };
+		A2CB05E916FB990C008E46F7 /* DDChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDChartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,7 @@
 		A28AD50B16DC790800D7ADBD /* DDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A2CB05E116FB92E1008E46F7 /* Chart library */,
 				A28AD52E16DC81ED00D7ADBD /* DDMoodPickerViewController.h */,
 				A28AD52F16DC81ED00D7ADBD /* DDMoodPickerViewController.m */,
 				A207413A16E8F81F00BEFE90 /* CoreDataTableViewController.h */,
@@ -125,6 +135,8 @@
 				A28AD54816DCF04C00D7ADBD /* DDDiaryTableViewController.m */,
 				A28AD53416DC8DE200D7ADBD /* DDCreateDiaryViewController.h */,
 				A28AD53516DC8DE200D7ADBD /* DDCreateDiaryViewController.m */,
+				A2CB05E816FB990C008E46F7 /* DDChartViewController.h */,
+				A2CB05E916FB990C008E46F7 /* DDChartViewController.m */,
 				A207413D16EB068E00BEFE90 /* DDDiaryViewController.h */,
 				A207413E16EB068E00BEFE90 /* DDDiaryViewController.m */,
 				A28AD53116DC862A00D7ADBD /* DDMood.h */,
@@ -176,6 +188,17 @@
 			name = "database related";
 			sourceTree = "<group>";
 		};
+		A2CB05E116FB92E1008E46F7 /* Chart library */ = {
+			isa = PBXGroup;
+			children = (
+				A2CB05E216FB92F6008E46F7 /* PCLineChartView.h */,
+				A2CB05E316FB92F6008E46F7 /* PCLineChartView.m */,
+				A2CB05E416FB92F6008E46F7 /* PCPieChart.h */,
+				A2CB05E516FB92F6008E46F7 /* PCPieChart.m */,
+			);
+			name = "Chart library";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +209,7 @@
 				A28AD4FE16DC790800D7ADBD /* Sources */,
 				A28AD4FF16DC790800D7ADBD /* Frameworks */,
 				A28AD50016DC790800D7ADBD /* Resources */,
+				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -240,6 +264,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+
 /* Begin PBXSourcesBuildPhase section */
 		A28AD4FE16DC790800D7ADBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -257,6 +298,9 @@
 				A28AD54916DCF04C00D7ADBD /* DDDiaryTableViewController.m in Sources */,
 				A207413C16E8F82000BEFE90 /* CoreDataTableViewController.m in Sources */,
 				A207413F16EB068E00BEFE90 /* DDDiaryViewController.m in Sources */,
+				A2CB05E616FB92F6008E46F7 /* PCLineChartView.m in Sources */,
+				A2CB05E716FB92F6008E46F7 /* PCPieChart.m in Sources */,
+				A2CB05EA16FB990C008E46F7 /* DDChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +346,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -334,7 +378,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
